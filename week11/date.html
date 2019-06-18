@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Date</title>
+</head>
+<body>
+    <script>
+        var today = new Date();
+        document.write(today + "<br />");
+
+        var xmas = new Date("25 December 2019");
+        document.write(xmas + "<br />");
+
+        document.write(today.toLocaleTimeString() + " " + today.toLocaleDateString() + "<br />");
+
+        document.write(today.getDay() + "<br />");
+
+        if(today.getDay()==2){
+            document.write("Today is 50% off because it's TUESDAY!!" + "<br />");
+        }
+
+        document.write(today.getMonth() + "<br />");
+
+        if(today.getMonth()==3){
+            document.write("It's April!!" + "<br />");
+        }
+
+        document.write(today.getDate() + "<br />");
+        document.write(today.getFullYear() + "<br />");
+
+        var dayOne = 24 * 60 * 60 * 1000;
+        var GoLive = (xmas.getTime() - today.getTime()) / dayOne;
+        document.write("<hr />");
+
+        document.write(Math.ceil(GoLive));
+
+    </script>
+</body>
+</html>

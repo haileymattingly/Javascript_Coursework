@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        var arrParks = new Array("YellowStone","Glacier", "Arches", "Mesa Verda", "Zion");
+        var arrParks2 = new Array("YellowStone","Glacier", "Arches", "Mesa Verda", "Glacier", "Zion");
+        var arrHotels = new Array("Hilton", "Holiday Inn", "Comfort Suites", "Best Western", "Motel 6");
+
+        document.write(arrParks + "<br />");
+        arrParks.pop();
+        document.write(arrParks + "<br />");
+
+        arrParks.push("Bryce");
+        document.write(arrParks + "<br />");
+
+        var result = arrParks2.indexOf("Glacier");
+        document.write(result + "<br />");
+
+        var result = arrParks2.lastIndexOf("Glacier");
+        document.write(result + "<br />");
+
+        document.write(arrHotels + "<br />");
+        arrHotels.reverse();
+        document.write(arrHotels + "<br />");
+        arrHotels.sort();
+        document.write(arrHotels + "<br />");
+
+        //var newJoin = arrHotels.join("***");
+        var newJoin = arrHotels.join("<br />");
+        document.write(newJoin + "<br />");
+
+        var arrResult = arrParks.slice(2, 5);
+        document.write(arrResult + "<br />");
+
+        var arrResult = arrParks.concat(arrHotels);
+        document.write(arrResult + "<br />");
+
+        var arrResult = arrHotels.concat(arrParks);
+        document.write(arrResult + "<br />");
+
+    </script>
+</body>
+</html>

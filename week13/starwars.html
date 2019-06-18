@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Starwars API</title>
+    <style>
+        #people li{
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        li {
+            list-style: none;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("#getPeople").click(function(){
+                $("#people").empty();
+                $.getJSON("https://swapi.co/api/people/", function(json){
+                    console.log(json);
+                    $.each(json["results"], function(i){
+                        console.log(json.results[i].name);
+                        var info = "<li id='" + i + "'>" + json.results[i].name + "</li>";
+                        $("#people").append(info);
+                    });
+                });
+            });
+
+            $("#people").on('click', 'li', function(){
+                //alert(this.id);
+                var person = parseInt(this.id) + 1;
+                $("#details").empty();
+
+                $.getJSON("https://swapi.co/api/people/" + person + "/", function(json){
+                    console.log(json);
+
+                    var info =  "<li> Name: " + json.name + "</li>" + 
+                                "<li> Height: " + json.height + "</li>" + 
+                                "<li> Gender: " + json.gender + "</li>";
+                    $("#details").append(info);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="getPeople" type="button">Get People</button>
+    <div>
+            <ul id="people"></ul>
+    </div>
+    <div>
+            <ul id="details"></ul>
+    </div>
+</body>
+</html>

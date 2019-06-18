@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>API</title>
+    <style>
+        #getResults li{
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        li {
+            list-style: none;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("#getList").click(function(){
+                $("#getResults").empty();
+                $.getJSON("http://itweb.fvtc.edu/wetzel/marathon/races/", function(json){
+                    //console.log(json);
+                    $.each(json["races"], function(i){
+                        //console.log(json.races[i].race_name);
+                        var info = "<li id='" + i + "'>" + json.races[i].race_name + "</li>";
+                        $("#getResults").append(info);
+                    });
+                });
+            });
+
+            $("#getResults").on('click', 'li', function(){
+                //alert(this.id);
+                var race = parseInt(this.id) + 1;
+                $("#showResults").empty();
+
+                $.getJSON("http://itweb.fvtc.edu/wetzel/marathon/results/" + race + "/", function(json){
+                    console.log(json);
+                    $.each(json["results"], function(i){
+                        var info = "<li id='" + i + "'>" + json.results[i].name + "</li>";
+                        $("#showResults").append(info);
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="getList" type="button">Get Data</button>
+    <div>
+        <ul id="getResults"></ul>
+    </div>
+    <div>
+        <ul id="showResults"></ul>
+    </div>
+</body>
+</html>

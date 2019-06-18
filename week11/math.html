@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Math</title>
+</head>
+<body>
+    <script>
+        var result = Math.PI;
+        document.write(result + "<br />");
+
+        var num = -10;
+        var result = Math.abs(num);
+        document.write(result + "<br />");
+
+        var MaxNum = Math.max(45, 25, 66, 78, 4, 52);
+        document.write(MaxNum + "<br />");
+
+        var MinNum = Math.min(45, 25, 66, 78, 4, 52);
+        document.write(MinNum + "<br />");
+
+        var num = 25.25;
+        var result = Math.ceil(num);
+        document.write(result + "<br />");
+
+        var num = 25.75;
+        var result = Math.floor(num);
+        document.write(result + "<br />");
+
+        var num = 25.49;
+        var result = Math.round(num);
+        document.write(result + "<br />");
+
+        var result = Math.pow(25, 5);
+        document.write(result + "<br />");
+
+        for(throwCount = 0; throwCount < 10; throwCount++)
+        {
+            diceThrow1 = Math.floor(Math.random()*6 + 1);
+            diceThrow2 = Math.floor(Math.random()*6 + 1);
+            result = diceThrow1 + diceThrow2;
+            document.write(diceThrow1 + "&nbsp;&nbsp;&nbsp;&nbsp;" + diceThrow2 + "&nbsp;&nbsp;&nbsp;&nbsp;" + result + "<br />");
+
+        }
+
+    </script>
+</body>
+</html>       

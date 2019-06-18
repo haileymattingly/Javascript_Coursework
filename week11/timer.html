@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timer</title>
+    <script>
+        var MessageTimer = setTimeout("ShowMessage()", 5000);
+        var Clock;
+
+        function ShowMessage(){
+            alert("Click the Start button to start the timer.");
+        }
+    
+        function StartTimer(){
+            Runner();
+            Clock = setInterval("Runner()", 1000)
+            clearTimeout(MessageTimer);
+        }
+
+        function StopTimer(){
+            clearInterval(Clock);
+        }
+
+        function Runner(){
+            var today = new Date();
+            document.getElementById("lblDisplay").innerHTML = today.toLocaleTimeString();
+        }
+    
+    </script>
+</head>
+<body>
+    <h1 id="lblDisplay"></h1>
+    <input type="button" value="Start" onclick="StartTimer()"/>
+    <input type="button" value="Stop" onclick="StopTimer()"/>
+</body>
+</html>
