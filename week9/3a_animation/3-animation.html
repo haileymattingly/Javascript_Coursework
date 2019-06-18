@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--<script src="scripts/3-animation.js"></script>-->
+    <script>
+        $(function(){
+            $("#demo").click(function(){
+                $("h1").animate({fontSize: "275%", opacity: ".5", left: "500px"}, 2000);
+
+                $("h1").animate({fontSize: "50%", opacity: ".7"}, 2000, function(){
+                    $("h2").next().fadeOut(1000).fadeIn(1000);
+                });
+
+                $("h1").animate({fontSize: "200%", opacity: "1"}, 2000);
+            });
+        });
+    </script>
+
+    <style type="text/css">
+        h1 {
+            position: relative;
+            /*left: -175;
+            font-size: 75%;
+            opaity: .2;*/
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Many FAQs</h1>
+    <ul>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+    </ul>
+    <h2>Contact</h2>
+    <div> Lorem ipsum dolor sit amet, consectetur.</div>
+    <input type="button" id="demo" value="Demo" />
+
+
+
+</body>
+
+</html>

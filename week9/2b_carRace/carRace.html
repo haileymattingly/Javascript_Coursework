@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>   </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--<script src="scripts/carRace.js"></script>-->
+    <script>
+        $(function(){
+            $("#start").click(function(){
+                var Num1 = (((Math.random() * 5) + 1) * 1000);
+                var Num2 = (((Math.random() * 5) + 1) * 1000);
+
+                $("#car1").animate({left: "1350px"}, Num1)
+                $("#car2").animate({left: "1350px"}, Num2)
+            });
+            $("#reload").click(function(){
+                location.reload();
+            });
+        });
+    </script>
+    
+    <style>
+    
+        div:first-of-type {
+            margin-top: 150px;
+            margin-bottom: 125px;
+        }
+        
+       
+        div {
+           /* height: 150px;*/
+            padding-top: 50px;
+            border-bottom: 2px dashed brown;
+            background-image: url(images/finish.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: bottom -15px left 1225px;
+            
+            
+        }
+    
+        
+        img {
+            position: relative;
+            width:  160px;
+            height: 80px;
+        }
+        
+        input {
+            width: 100spx;
+            height: 25px;
+        }
+    </style>
+    
+</head>
+
+<body>
+  <input id="reload" type="button" value="Reload">
+   <input id="start" type="button" value="Start Race">
+   <div>
+       <img id="car1" src="images/automobile-160338_640.png" alt="">
+   </div>
+   
+   <div>
+       <img id="car2" src="images/frankenstein-160358_640.png" alt="">
+   </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FV Runners</title>
+    <meta charset="UTF-8">
+    <link href="styles/normalize.css" rel="stylesheet" />
+    <link href="styles/my_style.css" rel="stylesheet" />
+    <script src="scripts/jquery-1.6.2.min.js"></script>
+    <script>
+        $(function () {
+
+            $("#btn").click(function () {
+
+                if ($("#btn").val() == "Future Events") {
+
+                    $("#btn").val("Current Events")
+
+                    $(".races").hide();
+
+                    $("#half").children().children().first().replaceWith("<li>Frosty Indoor Marathon</br><div class='details'>1/15/21 </br>TryIt Ice Arena</br > Neenah</div ></li >")
+                    $("#half").children().children().first().next().replaceWith("<li>Valentine Run </br><div class='details'>2 / 12 / 21 </br > Green Isle Park</br > De Pere</div ></li >")
+                    $("#half").children().children().last().replaceWith("<li>Snowball Marathon </br><div class='details'>3 / 03 / 21 </br > Menominee Park </br > Oshkosh</div ></li >")
+
+                    $("#5k").children().children().first().replaceWith("<li>Snowball Sprint</br><div class='details'>1/14/21 </br>Mosquito Hill </br > New London</div></li >")
+                    $("#5k").children().children().first().next().replaceWith("<li>Winter Warrior </br><div class='details'>2 / 06 / 21 </br > Bay Beach</br > Green Bay</div></li >")
+                    $("#5k").children().children().last().replaceWith("<li>Big Chill Run </br><div class='details'>2 / 24 / 21</br > Mid Valley Golf Course </br > De Pere</div></li >")
+
+                    $("#full").children().children().first().replaceWith("<li>Trailbreaker Marathon</br> <div class='details'>4/02/21 </br>Leach Amphitheatre</br > Oshkosh</div></li >")
+                    $("#full").children().children().first().next().replaceWith("<li>Jailbreak Marathon </br> <div class='details'>4 / 16 / 21 </br > Menominee Park </br > Oshkosh</div></li >")
+                    $("#full").children().children().last().replaceWith("<li>Cellcom Marathon </br><div class='details'>5 / 21 / 21</br > Lombardi Atrium</br > Green Bay </div></li >")
+
+                    $(".details").hide();
+
+                    $("li").click(function () {
+                        $("li").children().hide();
+                        $(this).children().show();
+                    });
+                }
+                else {
+                    $("#btn").val("Future Events")
+
+                    $(".races").hide();
+
+                    $("#half").children().children().first().replaceWith("<li>Fox River Marathon</br><div class='details'>10/15/20</br>Pierce Park</br>Appleton</div></li>")
+                    $("#half").children().children().first().next().replaceWith("<li>N.E.W. Half Marathon</br><div class='details'>10/29/20</br>Bay Beach Park</br>Green Bay</div></li>")
+                    $("#half").children().children().last().replaceWith("<li>Winnebago Run</br><div class='details'>11/27/20</br>Menominee Park</br>Oshkosh</div></li>")
+
+                    $("#5k").children().children().first().replaceWith("<li>Mini Sprint</br><div class='details'>10/30/20</br>Memorial Park</br>Appleton</div></li>")
+                    $("#5k").children().children().first().next().replaceWith("<li>Winter Warrior </br><div class='details'>2 / 06 / 21 </br > Bay Beach</br > Green Bay</div></li >")
+                    $("#5k").children().children().last().replaceWith("<li>Twilight Trail</br><div class='details'>11/13/20</br>River's Edge Park</br>Wrightstown</div></li>")
+
+                    $("#full").children().children().first().replaceWith("<li>Cheesehead Marathon</br><div class='details'>9/24/20</br>Pamperin Park</br>Green Bay</div></li>")
+                    $("#full").children().children().first().next().replaceWith("<li>Chain O'Lakes Marathon</br><div class='details'>10/29/20</br>Bay Beach Park</br>Green Bay</div></li>")
+                    $("#full").children().children().last().replaceWith("<li>Fox Cities Marathon</br><div class='details'>11/12/20</br>Menominee Park</br>Oshkosh</div></li>")
+
+                    $(".details").hide();
+
+                    $("li").click(function () {
+                        $("li").children().hide();
+                        $(this).children().show();
+                    });
+                }
+            });
+
+            $("#btnPresent").click(function () {
+
+                $(".races").hide();
+
+                $("#half").children().children().first().replaceWith("<li>Fox River Marathon</br><div class='details'>10/15/20</br>Pierce Park</br>Appleton</div></li>")
+                $("#half").children().children().first().next().replaceWith("<li>N.E.W. Half Marathon</br><div class='details'>10/29/20</br>Bay Beach Park</br>Green Bay</div></li>")
+                $("#half").children().children().last().replaceWith("<li>Winnebago Run</br><div class='details'>11/27/20</br>Menominee Park</br>Oshkosh</div></li>")
+
+                $("#5k").children().children().first().replaceWith("<li>Mini Sprint</br><div class='details'>10/30/20</br>Memorial Park</br>Appleton</div></li>")
+                $("#5k").children().children().first().next().replaceWith("<li>Winter Warrior </br><div class='details'>2 / 06 / 21 </br > Bay Beach</br > Green Bay</div></li >")
+                $("#5k").children().children().last().replaceWith("<li>Twilight Trail</br><div class='details'>11/13/20</br>River's Edge Park</br>Wrightstown</div></li>")
+
+                $("#full").children().children().first().replaceWith("<li>Cheesehead Marathon</br><div class='details'>9/24/20</br>Pamperin Park</br>Green Bay</div></li>")
+                $("#full").children().children().first().next().replaceWith("<li>Chain O'Lakes Marathon</br><div class='details'>10/29/20</br>Bay Beach Park</br>Green Bay</div></li>")
+                $("#full").children().children().last().replaceWith("<li>Fox Cities Marathon</br><div class='details'>11/12/20</br>Menominee Park</br>Oshkosh</div></li>")
+
+                $(".details").hide();
+
+                $("li").click(function () {
+                    $("li").children().hide();
+                    $(this).children().show();
+                });
+
+                $("#btnFuture").show();
+            });
+
+            //Previous Weeks Code
+
+            $(".races").hide();
+            $(".details").hide();
+            $("#img5k").click(function () {
+                $("#half").slideUp();
+                $("#full").fadeOut();
+                $("#5k").toggle();
+            });
+            $("#imghalf").click(function () {
+                $("#5k").hide();
+                $("#full").fadeOut();
+                $("#half").slideToggle();
+            });
+            $("#imgfull").click(function () {
+                $("#5k").hide();
+                $("#half").slideUp();
+                $("#full").fadeToggle();
+            });
+            $("li").click(function () {
+                $("li").children().hide();
+                $(this).children().show();
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Fox Valley Runners Club</h1>
+    </div> <!-- End of 'header' div-->
+
+    <div id="main">
+    </div> <!-- End of 'main' div-->
+
+    <div id="pics">
+
+        <div class="race_box">
+            <img id="img5k" src="images/run1.jpg" /><br />
+            <figcaption>5k/10k Events</figcaption>
+
+            <div class="races" id="5k">
+                <h3>5k/10 Events</h3>
+                <ul>
+                    <li>Mini Sprint</br>
+                        <div class="details">10/30/20</br>Memorial Park</br>Appleton</div>
+                    </li>
+                    <li>Iron Horse</br>
+                        <div class="details">11/06/20</br>Bay Beach Park</br>Green Bay</div>
+                    </li>
+                    <li>Twilight Trail</br>
+                        <div class="details">11/13/20</br>River's Edge Park</br>Wrightstown</div>
+                    </li>
+                </ul>
+            </div><!--  End of '5k' div-->
+
+        </div> <!-- End of 'run1' div-->
+
+        <div class="race_box">
+            <img id="imghalf" src="images/run2.jpg" /><br />
+            <figcaption>Half Marathon Events</figcaption>
+
+            <div class="races" id="half">
+                <h3>Half Marathon Events</h3>
+                <ul>
+                    <li>Fox River Marathon</br>
+                        <div class="details">10/15/20</br>Pierce Park</br>Appleton</div>
+                    </li>
+                    <li>N.E.W. Half Marathon</br>
+                        <div class="details">10/29/20</br>Bay Beach Park</br>Green Bay</div>
+                    </li>
+                    <li>Winnebago Run</br>
+                        <div class="details">11/27/20</br>Menominee Park</br>Oshkosh</div>
+                    </li>
+                </ul>
+            </div> <!-- End of 'half' div-->
+
+        </div><!-- End of 'run2' div-->
+
+        <div class="race_box">
+            <img id="imgfull" src="images/run3.jpg" /><br />
+            <figcaption>Full Marathon Events</figcaption>
+
+            <div class="races" id="full">
+                <h3>Full Marathon Events</h3>
+                <ul>
+                    <li>Cheesehead Marathon</br>
+                        <div class="details">9/24/20</br>Pamperin Park</br>Green Bay</div>
+                    </li>
+                    <li>Chain O'Lakes Marathon</br>
+                        <div class="details">10/29/20</br>Bay Beach Park</br>Green Bay</div>
+                    </li>
+                    <li>Fox Cities Marathon</br>
+                        <div class="details">11/12/20</br>Menominee Park</br>Oshkosh</div>
+                    </li>
+                </ul>
+            </div> <!-- End of 'full' div-->
+
+        </div> <!-- End of 'run3' div-->
+
+    </div> <!-- End of 'pics' div-->
+
+    <input id="btn" type="button" value="Future Events" />
+</body>
+
+</html>

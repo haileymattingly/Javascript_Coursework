@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            function loop(){
+                    $(".walking").animate({backgroundPositionX: "-180px", marginLeft: ["+=10px","linear"]},0).delay(100)
+                             .animate({backgroundPositionX: "-350px", marginLeft: ["+=10px","linear"]},0).delay(100)
+                             .animate({backgroundPositionX: "-560px", marginLeft: ["+=10px","linear"]},0).delay(100)
+                             .animate({backgroundPositionX: "-755px", marginLeft: ["+=10px","linear"]},0).delay(100)
+                             .animate({backgroundPositionX: "-938px", marginLeft: ["+=10px","linear"]},0).delay(100)
+                             .animate({backgroundPositionX: "-1120px", marginLeft: ["+=10px","linear"]},0).delay(100)
+                             .animate({backgroundPositionX: "-1316px", marginLeft: ["+=10px","linear"]},0).delay(100)
+                             .animate({backgroundPositionX: "0px", marginLeft: ["+=10px","linear"]},0, function(){
+                                 loop()
+                             });
+            }
+
+            $("#walk").click(function(){
+                loop();
+            });
+
+            $("#stop").click(function(){
+                $(".walking").stop(true, false);
+            });
+
+            $("#reload").click(function(){
+                location.reload();
+            });
+        });
+    </script>
+
+    <style>
+        .walking {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 184px;
+            height: 325px;
+            background: url(images/capguy-walk-1472.png) no-repeat 0 0;
+            overflow: hidden;
+            margin-left: 0px;
+        }
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="walking">
+        <!--<img src="images/capguy-walk-1472.png" class='deliveryMan' />-->
+    </div>
+    <input id="walk" type="button" value="Walk">
+    <input id="stop" type="button" value="Stop">
+    <input id="reload" type="button" value="Reload">
+
+</body>
+
+</html>

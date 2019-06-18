@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            $("#demo").click(function(){
+                $("img").hide().delay(2000).fadeIn(2000);
+            });
+
+            $("img").hover(function(){
+                $(this).animate({top: "25px"}, "fast", function(){
+                    $(this).animate({top: "0px"}, "fast");
+                });
+            });
+        });
+    </script>
+    
+     <style type="text/css">
+         img {
+             position: relative;
+             display: inline;
+
+         }
+         
+    </style>
+</head>
+<body>
+    
+ 
+       <img src="images/in.jpg" />
+       <img src="images/p.jpg" />
+       <img src="images/q.png" />
+       <img src="images/c.jpg" />
+       <img src="images/t.jpg" />
+       <img src="images/v.png" />
+       <img src="images/w.png" />
+       <img src="images/yt.jpg" />
+       <img src="images/cs.jpg" />
+
+
+    <input type="button" id="stop" value="Stop"
+/>
+        <input type="button" id="demo" value="Demo" />
+            
+    
+    
+</body>
+</html>
