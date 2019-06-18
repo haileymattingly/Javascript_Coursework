@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic-Tac-Toe</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+
+        $(function(){
+
+            var x = "<img src='x.png' />";
+            var o = "<img src='o.png' />";
+            var player = 1;
+
+            var arrP1 = new Array();
+            var arrP2 = new Array();
+
+            function win(currentPlayer){
+                currentPlayer = currentPlayer.sort();
+                //alert(currentPlayer + " is the winner!!");
+                if(currentPlayer.includes("td0") && currentPlayer.includes("td1") && currentPlayer.includes("td2")){
+                    alert("Player " + player + " is the winner!!");
+                    $("td").unbind("click");
+                }
+                else if(currentPlayer.includes("td0") && currentPlayer.includes("td3") && currentPlayer.includes("td6")){
+                    alert("Player " + player + " is the winner!!");
+                    $("td").unbind("click");
+                }
+                else if(currentPlayer.includes("td3") && currentPlayer.includes("td4") && currentPlayer.includes("td5")){
+                    alert("Player " + player + " is the winner!!");
+                    $("td").unbind("click");
+                }
+                else if(currentPlayer.includes("td6") && currentPlayer.includes("td7") && currentPlayer.includes("td8")){
+                    alert("Player " + player + " is the winner!!");
+                    $("td").unbind("click");
+                }
+                else if(currentPlayer.includes("td1") && currentPlayer.includes("td4") && currentPlayer.includes("td7")){
+                    alert("Player " + player + " is the winner!!");
+                    $("td").unbind("click");
+                }
+                else if(currentPlayer.includes("td0") && currentPlayer.includes("td4") && currentPlayer.includes("td8")){
+                    alert("Player " + player + " is the winner!!");
+                    $("td").unbind("click");
+                }
+                else if(currentPlayer.includes("td2") && currentPlayer.includes("td4") && currentPlayer.includes("td6")){
+                    alert("Player " + player + " is the winner!!");
+                    $("td").unbind("click");
+                }
+                else if(currentPlayer.includes("td2") && currentPlayer.includes("td5") && currentPlayer.includes("td8")){
+                    alert("Player " + player + " is the winner!!");
+                    $("td").unbind("click");
+                }
+            };
+
+            $("td").click(function(){
+                if(player == 1){
+                    $(this).html(x);
+                    arrP1.push(this.id);
+                    win(arrP1);
+                    player = 2;
+                }else{
+                    $(this).html(o);
+                    arrP2.push(this.id);
+                    win(arrP2);
+                    player = 1;
+                }
+                $(this).unbind("click");
+            });
+        });
+
+    </script>
+
+    <style>
+        table{
+            width: 315px;
+            height: 315px;
+            margin: 25px auto;
+            text-align: center;
+            border-collapse: collapse; 
+        }
+        
+        table td{
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+
+        img{
+            width: 75px;
+            height: 75px;
+        }
+
+        table tr:first-child td{
+            border-top: 0;
+        }
+
+        table tr:last-child td{
+            border-bottom: 0;
+        }
+
+        table tr td:first-child{
+            border-left: 0;
+        }
+
+        table tr td:last-child{
+            border-right: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td id="td0"></td>
+            <td id="td1"></td>
+            <td id="td2"></td>
+        </tr>
+        <tr>
+            <td id="td3"></td>
+            <td id="td4"></td>
+            <td id="td5"></td>
+        </tr>
+        <tr>
+            <td id="td6"></td>
+            <td id="td7"></td>
+            <td id="td8"></td>
+        </tr>
+    </table>
+</body>
+</html>

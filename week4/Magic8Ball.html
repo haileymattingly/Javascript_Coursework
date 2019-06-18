@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> Magic 8 Ball </title>
+    <script>
+
+        function Clear(){
+            document.getElementById("txtQuestion").value = "";
+            document.getElementById("lblAnswer").innerHTML = "Ask the 8 ball a question...";
+            document.getElementById("txtQuestion").focus();
+        }
+
+        var LastQuestion = "";
+
+        function CheckQ(){
+            
+            var Question = document.getElementById("txtQuestion").value;
+
+            // Check if the input ends with a question.
+            if(Question.charAt(Question.length - 1) == "?"){
+                // Check if the question has changed.
+                if(Question == LastQuestion){
+                    alert("You already asked this question. Try another.");
+                    Clear();
+                }else{
+                    Answer();
+                    LastQuestion = Question;
+                }
+                
+
+            }else{
+                alert("A question must end in a question mark.");
+                Clear();
+            }
+            
+        }
+        
+        function Answer(){
+
+            var Answers = [
+            "It is certain.",
+            "It is decidedly so.",
+            "Without a doubt.",
+            "Yes - definitely.",
+            "You may rely on it.",
+            "As I see it, yes.",
+            "Most likely.",
+            "Outlook good.",
+            "Yes.",
+            "Signs point to yes.",
+            "Reply hazy, try again.",
+            "Ask again later.",
+            "Better not tell you now.",
+            "Cannot predict now.",
+            "Concentrate and ask again.",
+            "Don't count on it.",
+            "My reply is no.",
+            "My sources say no.",
+            "Outlook not so good.",
+            "Very doubtful."
+            ]
+
+            var Answer = Answers[Math.floor(Math.random() * Answers.length)];
+            document.getElementById("lblAnswer").innerHTML = Answer;
+        }
+    </script>
+</head>
+<body>
+    <h1>Magic 8 Ball</h1>
+    <h3>What would you like to know?</h3>
+    <input id="txtQuestion" type="text" />
+    <input type="button" value="Ask the 8 Ball" onclick="CheckQ()" />
+
+    <h4>The 8 ball says</h4>
+    <h4 id="lblAnswer">Ask the 8 ball a question...</h4>
+
+</body>
+</html>

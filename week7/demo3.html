@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In-Class Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+
+        $(function(){
+
+            $("#sort").click(function(){
+                //$("ul").after("<h3>List of Games</h3>");
+                //$("<h3>List of Games</h3>").insertAfter("ul");
+                //$("ul").before("<h3>List of Games</h3>");
+                //$("<h3>List of Games</h3>").insertBefore("ul");
+
+                //$("h3").replaceWith("<h3>List of Games</h3>");
+                $("h3").text("List of Games");
+
+                //$("li").slice(2, 5).css("background-image", "linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%)");
+                $("body").find("span").css("background-image", "linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%)");
+
+                /*
+                $("li").filter(":even").css("background-image", "linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%)");
+                $("li").filter(":odd").css("background-image", "linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%)");
+                $("li").filter(":first").css("background-image", "linear-gradient(90deg, #FAD961 0%, #F76B1C 100%)");
+                $("li").filter(":last").css("background-image", "linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)");
+                */
+
+                //$("div").css("background-image", "linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%)");
+                //$("div").not("#container").css("background-image", "linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%)");
+
+                //$("li").eq(2).css("background-image", "linear-gradient(90deg, #FAD961 0%, #F76B1C 100%)");
+                //$("li").eq(-2).css("background-image", "linear-gradient(90deg, #FAD961 0%, #F76B1C 100%)");
+
+                $("p").html("This is <strong>cool</strong>");
+                $("input").val("Done!!");
+
+            });
+
+        });
+
+    </script>
+
+    <style>
+        #container{
+            width: 1200px;
+            height: 700px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        #myList{
+            width: 300px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <div id="myList">
+            <h3>Unsorted Movies</h3>
+            <ul>
+                <li>Legend of Zelda: Breath of the Wild</li>
+                <li>Horizon Zero Dawn</li>
+                <li>Super Mario Odyssey</li>
+                <li>Resident Evil 7: Biohazard</li>
+                <li>PlayerUnknown's Battlegrounds</li>
+                <li>Destiny 2</li>
+                <li>Wolfenstein II: The New Colossus</li>
+                <li>Assassin's Creed Origins</li>
+                <li>Injustice 2</li>
+                <li>Call of Duty</li>
+                <li>Prey</li>
+                <li>Uncharted</li>
+                <li>Sonic Mania</li>
+                <li>Divinity</li>
+                <li>The Evil Within 2</li>
+            </ul>
+            <input id="sort" type="button" value="Do Something" />
+            <p>Writing in <span>jquery</span> is fun!</p>
+        </div>
+
+    </div>
+</body>
+</html>

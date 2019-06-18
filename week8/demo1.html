@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funtions Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    
+    </script>
+
+    <script>
+
+        $(function(){
+            $("#btnAction").click(function(){
+                //MyFunction();
+                //x("Testing");
+                //$("#box1").slideToggle("slow", function(){
+                //    alert("Done")
+                //});
+
+                for(i = 1; i < 6; i++){
+                $("#id"+i).css("background-image", "linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%)");
+                }
+
+                $("#id1, #id2, #id3, #id4, #id5").mouseenter(function(){
+                    $(this).css("background-image", "linear-gradient(0deg, #08AEEA 0%, #2AF598 100%)");
+                });
+                
+                $("#id1, #id2, #id3, #id4, #id5").mouseleave(function(){
+                    $(this).css("background-image", "linear-gradient(to right, #8a2387, #e94057, #f27121)");
+                });
+                
+            });
+        });
+
+        var x = function(var1){
+            alert("Take action on var1: " + var1);
+        }
+
+        function MyFunction(){
+            alert("Hello");
+        }
+
+    </script>
+
+    <style>
+        #box1{
+            width: 450px;
+            height: 350px;
+            background-color: #FA8BFF;
+            background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+
+        }
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+
+    <ul>
+        <li id="id1">This is item A</li>
+        <li id="id2">This is item B</li>
+        <li id="id3">This is item C</li>
+        <li id="id4">This is item D</li>
+        <li id="id5">This is item E</li>
+    </ul>
+
+    <input type="button" id="btnAction" value="Do Somthing!!" />
+</body>
+</html>

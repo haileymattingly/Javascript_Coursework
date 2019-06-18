@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In-Class Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script>
+        //  $(document).ready(function(){
+            $(function(){
+                $("div").css("background-color", "purple");
+                $("#item1").css("background-color", "red");
+                $("#item2").css("background-color", "blue");
+                $("#item3").css("background-color", "green");
+
+                $("a").css("background-color", "white");
+                $("a").css("display", "block");
+
+                $("h3").text("Do Something Awesome!");
+                // $("a").attr("href", "http://www.google.com");
+                $("#item1 a").attr("href", "http://www.redbox.com");
+                $("#item2 a").attr("href", "http://www.bluebox.com");
+                $("#item3 a").attr("href", "http://www.greenbox.com");
+                
+                $("img").attr("src", "https://5.imimg.com/data5/CK/AS/MY-60212530/9-ply-duplex-box-500x500.jpg");
+
+                $("p").addClass("MyFont");
+
+                $("h3").click(function(){
+                    $("p").removeClass("MyFont");
+                    $("#item1 img").toggle('fast');
+
+                    if($("#item3 img").is(":visible")){
+                        $("#item3 img").fadeOut();
+                    }else{
+                        $("#item3 img").fadeIn();
+                    }
+
+                    
+                    $("#item2 img").toggle('2000');
+                });
+
+            });
+    </script>
+
+    <style>
+
+        .MyFont{
+            background-color: black;
+            color: white;
+            font-size: 20px;
+        }
+
+        #content1 div{
+            float:left;
+        }
+        img{
+            height: 329px;
+            width: 329px;
+        }
+        #content1{
+            padding-top: 50px;
+            width: 1000px;
+            text-align: center;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+<h3>Do Something Cool</h3>
+
+    <div id="content1">
+        <div id="item1">
+            <img src="https://pbs.twimg.com/profile_images/378800000180275741/c4f9bbd5f22551cf75e505548ac2c7e4_400x400.jpeg">
+            <br /><p>Example text for the Red box</p><br /><br />
+            <a href="http://www.red.com">Red Box</a>
+        </div>
+        <div id="item2">
+            <img src="http://blueboxlive.com/bluebox.png">
+            <br /><p>Example text for the Blue box</p><br /><br />
+            <a href="http://www.blue.com">Blue Box</a>
+        </div>
+        <div id="item3">
+            <img src="https://4vector.com/i/free-vector-glowing-green-box_133096_Glowing_Green_Box.jpg">
+            <br /><p>Example text for the Green box</p><br /><br />
+            <a href="http://www.green.com">Green Box</a>
+        </div>
+    </div>
+</body>
+</html>

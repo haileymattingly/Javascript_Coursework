@@ -1,0 +1,36 @@
+<html>
+    <!DOCTYPE html>
+
+    <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Week 3 - Demo 1 (Arrays)</title>
+    </head>
+    <body>
+        <h1>Demo 1</h1>
+        <h3>
+            <script>
+                // var names = new Array("Bob", "Steve", "Joe", "Hailey");
+                var arrColors = new Array();
+                arrColors[0] = "Red";
+                arrColors[1] = "Green";
+                arrColors[2] = "Blue";
+                arrColors[3] = "Black";
+                arrColors[4] = "White";
+
+                /*
+                var x = 0;
+                while(x < arrColors.length){
+                    document.write(arrColors[x] + "<br />");
+                    x++;
+                }
+                */
+
+                for(var color in arrColors){
+                    document.write(arrColors[color] + "<br />");
+                }
+
+            </script>
+        </h3>
+    </body>
+</html>

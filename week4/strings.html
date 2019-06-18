@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> JavaScript Strings </title>
+    <script>
+        
+        var MyString = "Hello World is cool!";
+        var MyChar;
+
+        // 0 1 2 3 4 5 6 7 8 9 10
+        // H e l l o   W o r l d
+
+        window.onload = function welcome(){
+            
+            //var MyChar = MyString.indexOf("l", 4);
+            MyChar = MyString.charAt(6);
+            // MyChar = MyString.charAt(MyString.length - 5);
+            document.getElementById("lblDisplay").innerHTML = "The value is: " + MyChar;
+        }
+
+        function WhatWas(){
+            var sub = MyString.substr(MyString.indexOf("W"), 5);
+            // var sub = MyString.substring(MyString.indexOf("W"), MyString.indexOf(" ",MyString.indexOf("W")));
+            alert(sub);
+        }
+    </script>
+</head>
+<body>
+    <h1 id="lblDisplay">Test</h1>
+    <input type="button" value="What Was" onclick="WhatWas()" />
+</body>
+</html>

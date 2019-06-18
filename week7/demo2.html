@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In-Class Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+
+        $(function(){
+
+            //$("#dog").css("background-image", "linear-gradient(90deg, #FAD961 0%, #F76B1C 100%)");
+            //$("#dog").parent().css("background-image", "linear-gradient(90deg, #FAD961 0%, #F76B1C 100%)");
+            //$("#dog").parents().css("background-image", "linear-gradient(90deg, #FAD961 0%, #F76B1C 100%)");
+            //$("#dog").parents(".title").css("background-image", "linear-gradient(90deg, #FAD961 0%, #F76B1C 100%)");
+            //$("#dog").next().next().css("background-image", "linear-gradient(90deg, #FAD961 0%, #F76B1C 100%)");
+            //$("#dog").parent().parent().parent().css("background-image", "linear-gradient(90deg, #FAD961 0%, #F76B1C 100%)");
+            //$("#dog").parent().parent().next().css("background-image", "linear-gradient(90deg, #FAD961 0%, #F76B1C 100%)");
+            //$("#dog").parent().parent().next().children("ul").css("background-image", "linear-gradient(90deg, #FAD961 0%, #F76B1C 100%)");
+            //$("#dog").parent().parent().next().children("ul").children().first().css("background-image", "linear-gradient(90deg, #FAD961 0%, #F76B1C 100%)");
+            //$("#dog").parent().parent().next().children("ul").children().last().css("background-image", "linear-gradient(90deg, #FAD961 0%, #F76B1C 100%)");
+            //$("#dog").parent().parent().next().children("ul").children().first().next().css("background-image", "linear-gradient(90deg, #FAD961 0%, #F76B1C 100%)");
+            //$("#dog").parent().parent().parent().parent().parent().css("background-image", "linear-gradient(90deg, #FAD961 0%, #F76B1C 100%)");
+            $("#dog").parent().parent().closest("div").css("background-image", "linear-gradient(90deg, #FAD961 0%, #F76B1C 100%)");
+
+        });
+
+    </script>
+
+    <style>
+        #Animals{   
+            background-color: #21D4FD;
+            background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+            width: 50%;
+            height: 700px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        #Mammals{
+            background-color: #08AEEA;
+            background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        #Reptiles{
+            background-color: #08AEEA;
+            background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        #Mammal{
+            background-color: #00DBDE;
+            background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+            width: 50%;
+            margin: 0 auto;
+            text-align: left;
+            margin-top: 75px;
+        }
+
+        #Reptile{
+            background-color: #FF3CAC;
+            background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+            width: 50%;
+            margin: 0 auto;
+            text-align: left;
+            margin-top: 75px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="Animals">
+        <h3>Animals</h3>
+        <div class = "title" id="Mammals">
+            <h3>Mammals</h3>
+            <ul id="Mammal">
+                <li id="dog">Dogs</li>
+                <li>Cats</li>
+                <li>Monkeys</li>
+                <li>Loins</li>
+            </ul>
+        </div>
+        <div id="Reptiles">
+            <h3>Reptiles</h3>
+            <ul id="Reptile">
+                <li>Crocodile</li>
+                <li>Snakes</li>
+                <li>Lizards</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>

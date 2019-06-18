@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> JavaScript Onload </title>
+    <script>
+        function Working(){
+            var x = 1;
+            x = x + 2;
+            document.getElementById("lblDisplay").innerHTML = "Working is " + x;
+        }
+        
+    </script>
+</head>
+<body onload="Working()">
+    <h1 id="lblDisplay">Test</h1>
+    
+</body>
+</html>

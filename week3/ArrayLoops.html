@@ -1,0 +1,33 @@
+<html>
+    <!DOCTYPE html>
+
+    <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Week 3 - Demo 2 (Array Loops)</title>
+    </head>
+    <body>
+            <h1>Demo 2</h1>
+            <h3>
+                <script>
+                    var arrItems = new Array();
+
+                    var user_item = " ";
+                    
+                    var count = 0;
+                    while (user_item != null){
+                        user_item = prompt("Enter your Item", "");
+                        if(user_item != null){
+                            arrItems[count] = user_item;
+                            count++;
+                        }                        
+                    }
+
+                    for ( var Item in arrItems){
+                        document.write(arrItems[Item] + "<br />");
+                    }
+                        
+                </script>
+            </h3>
+    </body>
+</html>

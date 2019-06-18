@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> Add Master Pro </title>
+    <script>
+       function Add(){
+           var FirstNum = Number(document.getElementById("txtFirstNumber").value);
+           var SecondNum = Number(document.getElementById("txtSecondNumber").value);
+           var SumTotal = FirstNum + SecondNum;
+
+            if(isNaN(SumTotal)){
+                alert("Please enter valid numbers.")
+                Clear();
+            }else{
+                document.getElementById("lblDisplay").innerHTML = SumTotal;
+            }          
+       }
+
+       function Clear(){
+            document.getElementById("lblDisplay").innerHTML = 0;
+            document.getElementById("txtFirstNumber").value = "";
+            document.getElementById("txtSecondNumber").value = "";
+            document.getElementById("txtFirstNumber").focus();
+       }
+
+    </script>
+</head>
+<body>
+    <h1>Add Master Pro</h1>
+    <br /><br />
+    <p>First Number</p>
+    <input id="txtFirstNumber" type="text" />
+    <br /><br />
+    <p>Second Number</p>
+    <input id="txtSecondNumber" type="text" />
+    <br /><br />
+    <h3 id="lblDisplay">0</h3>
+    <br /><br />
+    <hr />
+
+    <input type="button" value="Add" onclick="Add()"/>
+    <input type="button" value="Clear" onclick="Clear()"/>
+</body>
+</html>

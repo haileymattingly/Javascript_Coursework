@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Week 2 - Demo 2 (If and Switch)</title>
+</head>
+<body>
+    <script>
+        //var grade = prompt("Please enter a grade letter", "");
+        var grade = prompt("Please enter a grade between 0 and 100", "");
+        //grade = grade.toLowerCase();
+        //grade = grade.toUpperCase();
+        grade = Number(grade);
+
+        switch (true) {
+            case (grade >= 90):
+                alert("Excellent Work!!");
+                break;
+            case (grade >= 80 && grade <= 90):
+                alert("Doing Good!");
+                break;
+            case (grade >= 70 && grade <= 80):
+                alert("Average.");
+                break;
+            default:
+                alert("Please enter a number between 0-100");
+                break;
+        }
+
+        //switch (grade) {
+        //    case "A":
+        //        alert("Excellent Work!!");
+        //        break;
+        //    case "B":
+        //        alert("Doing Good!");
+        //        break;
+        //    case "C":
+        //        alert("Average.");
+        //        break;
+        //    default:
+        //        alert("Please enter A, B, or C");
+        //        break;
+        //}
+
+        //if (grade == "A") {
+        //    alert("Excellent Work!!");
+        //} else if (grade == "B") {
+        //    alert("Doing Good!");
+        //} else if (grade == "C") {
+        //    alert("Average.");
+        //} else {
+        //    alert("Please enter A, B, or C");
+        //}
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Week 6 // In-Class Demo 2</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <style>
+           #wrapper {
+                height: 1600px;
+           }
+
+           #wrap {
+                height: 500px;
+                background: #bdc3c7;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+           }
+
+           input {
+               margin-top: 25px;
+               margin-left: 50px;
+           }
+
+           #box1, #box2, #box3 {
+               width: 450px;
+                height: 350px;
+                margin: 50px;
+                
+
+           }
+
+           #box1 {
+                background: #8A2387;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+           }
+
+           #box2 {
+                background: #59C173;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to bottom, #5D26C1, #a17fe0, #59C173);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to bottom, #5D26C1, #a17fe0, #59C173); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+           }
+
+            #box3 {
+                background: #03001e;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to bottom, #fdeff9, #ec38bc, #7303c0, #03001e);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to bottom, #fdeff9, #ec38bc, #7303c0, #03001e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+           }
+
+        </style>
+        <script>
+            $(function(){
+                // Box 1 Stuff
+                $("#slideUp").click(function(){
+                    $("#box1").slideUp();
+                });
+
+                $("#slideDown").click(function(){
+                    $("#box1").slideDown();
+                });
+
+                $("#slideUpDown").click(function(){
+                    $("#box1").slideToggle();
+                });
+
+                // Box 2 Stuff
+                $("#fadeOut").click(function(){
+                    $("#box2").fadeOut();
+                });
+
+                $("#fadeIn").click(function(){
+                    $("#box2").fadeIn();
+                });
+
+                $("#fadeInOut").click(function(){
+                    $("#box2").fadeToggle();
+                });
+
+                $("#fadeTo50").click(function(){
+                    $("#box2").fadeTo(1000, .5);
+                });
+
+                $("#fadeTo100").click(function(){
+                    $("#box2").fadeTo(1000, 1);
+                });
+
+                // Box 3 Stuff
+                $("#hide").click(function(){
+                    $("#box3").hide();
+                });
+
+                $("#show").click(function(){
+                    $("#box3").show();
+                });
+
+                $("#hideShow").click(function(){
+                    $("#box3").toggle();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="wrap">
+                <input type="button" id="slideUp" value="Slide Up" />
+                <input type="button" id="slideDown" value="Slide Down" />
+                <input type="button" id="slideUpDown" value="Toggle Slide" />
+                <div id="box1"></div>
+            </div>
+
+            <div id="wrap">
+                <input type="button" id="fadeOut" value="Fade Out" />
+                <input type="button" id="fadeIn" value="Fade In" />
+                <input type="button" id="fadeInOut" value="Toggle Fade" />
+                </br>
+                <input type="button" id="fadeTo50" value="Fade to 50%" />
+                <input type="button" id="fadeTo100" value="Fade to 100%" />
+                <div id="box2"></div>
+            </div>
+
+            <div id="wrap">
+                <input type="button" id="hide" value="Hide" />
+                <input type="button" id="show" value="Show" />
+                <input type="button" id="hideShow" value="Toggle Hide" />
+                <div id="box3"></div>
+            </div>
+
+        </div>
+    </body>
+</html>

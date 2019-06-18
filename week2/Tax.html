@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Week 2 - Tax Assignment</title>
+</head>
+<body>
+    <script>
+        var income = prompt("Please enter your income amount.");
+        var taxExempt = 12000;
+        var perBracket1 = .15;
+        var perBracket2 = .25;
+        var highestBracket1 = 36000;
+        var highestBracket2 = 90000;
+
+        income = Number(income);
+
+
+        if (income > 0 && income != null) {
+                switch (true) {
+                    case (income <= taxExempt):
+                        alert("There are no taxes due on this income.");
+                        break;
+                    case (income > taxExempt && income <= highestBracket1):
+                        alert("You will need to pay " + (income * perBracket1) + " on your " + income + " income.");
+                        break;
+                    case (income > highestBracket1 && income <= highestBracket2):
+                        alert("You will need to pay " + (income * perBracket2) + " on your " + income + " income.");
+                        break;
+                    case (income > highestBracket2):
+                        alert("I do not have the data to calculate the tax on this income.");
+                        break;
+                }
+            } else {
+                alert("Please enter a positive number.")
+            }
+        
+
+    </script>
+</body>
+</html>

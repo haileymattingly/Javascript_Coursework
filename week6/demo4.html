@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Week 6 // In-Class Demo 4</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <script>
+            $(function(){
+                $("dd").hide();
+                $("dt").click(function(){
+                    $(this).toggleClass("open").next().slideToggle(1000);
+                });
+            });
+        </script>
+
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+            
+            #wrap {
+                width: 60%;
+                padding: 10px;
+                padding-bottom: 75px;
+                margin: 10px auto;
+                border: .5px solid gray;
+            }
+
+            dt {
+                color: cornflowerblue;
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 16px;
+                padding-left: 18px;
+                margin-top: 50px;
+                cursor: pointer;
+                background: url("arrow-sprite.png") 0 0 no-repeat;
+            }
+
+            dt:hover {
+                color: green;
+                background-position: 0 -16px;
+            }
+
+            dt.open {
+                background-position: 0 -32px;
+            }
+
+            dt.open:hover {
+                background-position: 0 -48px;
+            }
+
+            dd {
+                font-size: 18px;
+                line-height: 1.3em;
+                margin-left: 32px;
+                margin-top: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <h1>Jquery with a Definition List</h1>
+            <h2>Technical Support</h2>
+            <dl>
+                <dt>What is a mouse?</dt>
+                <dd>A mouse is a device to navigate a computer screen.</dd>
+
+                <dt>Do I need a new computer every year?</dt>
+                <dd>If you're a gamer then YES!</dd>
+            </dl>
+        </div>
+    </body>
+</html>
